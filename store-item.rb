@@ -30,6 +30,9 @@ puts quilt_1.fabric
 
 quilt_1.price = 600
 puts quilt_1.price
+quilt_3.price = 325
+puts quilt_3.price
+
 
 
 
