@@ -19,19 +19,38 @@ class Quilt
 
 end
 
+class Snuggie < Quilt
+  def initialize(color, size, price, fabric)
+    super
+  end
+
+  def sell_snuggie
+    puts "Don't you want to be warm everywhere? Buy a Snuggie!"
+  end
+end
+
 quilt1 = Quilt.new("red", "medium", 500, "cotton")
 quilt2 = Quilt.new("green", "large", 900, "polyester")
 quilt3 = Quilt.new("mauve", "small", 250, "acrylic")
+snuggie1 = Snuggie.new("tan", "extra_large", 25, "cotton")
 
-puts quilt_1.size
-puts quilt_3.color
-puts quilt_2.price
-puts quilt_1.fabric
+puts quilt1.size
+puts quilt3.color
+puts quilt2.price
+puts quilt1.fabric
 
-quilt_1.price = 600
-puts quilt_1.price
-quilt_3.price = 325
-puts quilt_3.price
+quilt1.price = 600
+puts quilt1.price
+quilt3.price = 325
+puts quilt3.price
+
+puts snuggie1.price
+puts snuggie1.sell_snuggie
+snuggie1.price = 30
+puts snuggie1.price
+
+
+
 
 
 
