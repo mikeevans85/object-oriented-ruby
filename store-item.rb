@@ -16,7 +16,6 @@ class Quilt
     @price= price
     @fabric = fabric
   end
-
 end
 
 class Snuggie < Quilt
@@ -26,6 +25,7 @@ class Snuggie < Quilt
 
   def sell_snuggie
     puts "Don't you want to be warm everywhere? Buy a Snuggie!"
+    @price +=5
   end
 end
 
@@ -46,8 +46,8 @@ puts quilt3.price
 
 puts snuggie1.price
 puts snuggie1.sell_snuggie
-snuggie1.price = 30
-puts snuggie1.price
+puts snuggie1.sell_snuggie
+
 
 
 
