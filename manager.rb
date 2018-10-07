@@ -1,3 +1,5 @@
+require "./employee.rb"
+
 class Manager < Employee
   def initialize(input_options)
     super
