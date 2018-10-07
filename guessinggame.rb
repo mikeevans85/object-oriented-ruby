@@ -27,7 +27,7 @@ end
 
 game = GuessingGame.new
 
-game.guess(35)
+game.guess()
 game
 
 
