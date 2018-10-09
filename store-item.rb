@@ -2,10 +2,10 @@ require "./quilt.rb"
 require "./snuggie.rb"
 
 
-quilt1 = Quilt.new("red", "medium", 500, "cotton")
-quilt2 = Quilt.new("green", "large", 900, "polyester")
-quilt3 = Quilt.new("mauve", "small", 250, "acrylic")
-snuggie1 = Snuggie.new("tan", "extra_large", 25, "cotton")
+quilt1 = StoreFront::Quilt.new("red", "medium", 500, "cotton")
+quilt2 = StoreFront::Quilt.new("green", "large", 900, "polyester")
+quilt3 = StoreFront::Quilt.new("mauve", "small", 250, "acrylic")
+snuggie1 = StoreFront::Snuggie.new("tan", "extra_large", 25, "cotton")
 
 puts quilt1.size
 puts quilt3.color
