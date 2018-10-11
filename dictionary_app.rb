@@ -17,8 +17,11 @@ while true
   response3 = HTTP.get("https://api.wordnik.com/v4/word.json/#{word}/pronunciations?useCanonical=false&limit=50&api_key=ac6099e63826b8650f05e22c4cc08baa2f21668e3f16176fd")
   pronunciation = response3.parse
   pron = pronunciation[0]["raw"]
-
-  puts "#{word} (#{pron})"
+  if pron == nil
+    puts "#{word}"
+  else
+    puts "#{word} (#{pron})"
+  end
   puts "Definition(s): "
 
   index = 0
@@ -40,7 +43,7 @@ while true
     puts x
   end  
 
-  puts "Press q to quit, or any other key to continue."
+  puts "Press q and then Enter to quit, or just Enter to continue."
   input = gets.chomp
   if input == "q"
     puts "Goodbye!"

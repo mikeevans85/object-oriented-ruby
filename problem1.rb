@@ -1,18 +1,31 @@
-food_array = [ ]
+require 'HTTP'
 
-puts "What are your five favorite foods?"
+while true
+  system "clear"
+  puts "Welcome to the fortune app!"
+  puts "Press 'f' to receive a fortune!"
 
-5.times do
-  food = gets.chomp
-  food_array << food
+  fortunes = ["You will find lotsa happiness.", "Bad luck and misfortune will infest your pathetic soul for all eternity.", "A fleeting romance will blossom soon.", "Good luck!", "Pizza will come to you very soon."]
+
+  input = gets.chomp
+  fortune = fortunes[rand(5)]
+
+  if input == "f"
+    puts fortune
+  else
+    puts "Only lucky people press 'f'!"
+  end
+
+  puts "Press 'q' to quit, or 'f' to receive another fortune!"
+
+  input2 = gets.chomp
+  if input2 == "q"
+    puts "Goodbye!"
+    break
+  end
 end
 
-index = 0
 
-food_array.length.times do
-  puts "#{index + 1}. #{food_array[index]}"
-  index = index + 1
-end
 
 
 
