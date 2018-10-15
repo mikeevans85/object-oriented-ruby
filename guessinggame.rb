@@ -1,15 +1,15 @@
 class GuessingGame
 
-  def initialize  
-    @answer = rand(100).to_i
-  end
+  @@answer = rand(100).to_i
+  
 
   def answer
-    return @answer
+    return @@answer
   end
 
 
   def guess(input) 
+    puts answer
     if input < answer
       puts "Too Low!"
     elsif input > answer
@@ -27,7 +27,7 @@ end
 
 game = GuessingGame.new
 
-game.guess()
+game.guess(69)
 game
 
 
